@@ -195,6 +195,8 @@ def viewDecisionTree(model, column_names):
 def find_outliers(feature):
     '''Return a list of outliers in the data'''
 
+    #feature = feature.dropna()
+
     # Temporarily replace nulls with mean so they don't cause an error
     feature = feature.fillna(feature.mean()) 
 
@@ -208,5 +210,8 @@ def find_outliers(feature):
     lower_bound = quartile_1 - (iqr * 1.5)
     upper_bound = quartile_3 + (iqr * 1.5)
 
+    outliers_mask = ((feature < lower_bound) | (feature > upper_bound))
+
     # Return rows where the feature is outside the outlier boundaries
-    return np.where((feature > upper_bound) | (feature < lower_bound))
+    return outliers_mask
+    #np.where((feature > upper_bound) | (feature < lower_bound))
