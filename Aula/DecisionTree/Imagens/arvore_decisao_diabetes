@@ -1,8 +1,8 @@
 digraph Tree {
 node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
 edge [fontname="helvetica"] ;
-0 [label=<Urina Frequente_Não &le; 0.5<br/>gini = 0.444<br/>samples = 3<br/>value = [2, 1]<br/>class = Não Diabetes>, fillcolor="#f2c09c"] ;
-1 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 1]<br/>class = Diabetes>, fillcolor="#399de5"] ;
+0 [label=<Urina Frequente_Não &le; 0.5<br/>gini = 0.5<br/>samples = 4<br/>value = [2, 2]<br/>class = Não Diabetes>, fillcolor="#ffffff"] ;
+1 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 2]<br/>class = Diabetes>, fillcolor="#399de5"] ;
 0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
 2 [label=<gini = 0.0<br/>samples = 2<br/>value = [2, 0]<br/>class = Não Diabetes>, fillcolor="#e58139"] ;
 0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
